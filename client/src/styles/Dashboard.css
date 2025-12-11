@@ -1,0 +1,143 @@
+/* --- General Container and Layout --- */
+.dash-container {
+  width: 90%;
+  max-width: 1200px; /* Added max-width for very wide screens */
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+}
+
+/* Improve spacing for headings */
+h2 {
+    margin-top: 40px; /* Ensure space above section headings */
+    margin-bottom: 20px;
+}
+
+.dash-actions {
+  margin-bottom: 20px; /* Slightly increased space below the create button */
+}
+
+/* --- Primary Button (Create New Request) --- */
+.primary-btn {
+  background: #007bff;
+  padding: 8px 14px;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block; /* Treat link like a block element for padding */
+}
+
+/* --- Table Styles --- */
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dash-table th, .dash-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  vertical-align: middle; /* Centers content vertically in cells */
+}
+
+/* Align Budget and Date to the right for numeric consistency */
+.dash-table td:nth-child(6), /* Budget column */
+.dash-table td:nth-child(7) { /* Date column */
+    text-align: right;
+}
+
+/* Center Status and Action columns */
+.dash-table th:last-child,
+.dash-table td:last-child,
+.dash-table th:nth-last-child(2),
+.dash-table td:nth-last-child(2) {
+    text-align: center;
+}
+
+/* ------------------------------------- */
+/* --- Status Pills (Outline Style) --- */
+/* ------------------------------------- */
+.status {
+  padding: 3px 6px; /* Smaller padding */
+  border-radius: 4px; /* Slightly less rounded */
+  font-size: 0.9em;
+  font-weight: 600;
+  display: inline-block;
+  background: #f8f9fa; /* Light background for pill */
+  border: 1px solid; /* Use a colored border */
+}
+
+.status-pending { 
+    border-color: #f0ad4e; /* Orange border */
+    color: #f0ad4e; /* Orange text */
+}
+.status-accepted { 
+    border-color: #5cb85c; /* Green border */
+    color: #5cb85c; /* Green text */
+}
+.status-rejected { 
+    border-color: #d9534f; /* Red border */
+    color: #d9534f; /* Red text */
+}
+.status-scheduled, .status-in-progress { 
+    border-color: #0275d8; /* Blue border */
+    color: #0275d8; /* Blue text */
+}
+
+.status-completed { 
+    border-color: #06de40; /* Blue border */
+    color: #06de40; /* Blue text */
+}
+
+/* ------------------------------------- */
+/* --- Action Buttons (Solid Fill) --- */
+/* ------------------------------------- */
+
+/* Container for View/Delete buttons to put them side-by-side */
+.client-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px; /* Space between View and Delete */
+}
+
+/* Base style for View and Delete buttons */
+.view-btn, .delete-btn {
+  padding: 6px 12px;
+  background: #0275d8; /* Solid background - Primary Blue */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  /* Removed individual margins since we are using .client-action-buttons gap */
+}
+
+/* Red solid style for Delete button for visual weight */
+.delete-btn {
+    background: #d9534f;
+}
+
+/* --- Manager Buttons (Accept/Reject) Container --- */
+.manager-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons within the cell */
+  gap: 10px;    /* Space between Accept and Reject */
+}
+
+/* --- Manager Buttons (Individual Styles) --- */
+.accept-btn, .reject-btn {
+  padding: 8px 14px;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accept-btn {
+  background: #5cb85c; /* Green for accept */
+}
+
+.reject-btn {
+  background: #d9534f; /* Red for reject */
+}

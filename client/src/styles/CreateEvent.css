@@ -1,0 +1,111 @@
+/* Container */
+.ce-page-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.ce-card {
+  width: 600px;
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.ce-title {
+  text-align: center;
+  color: #2d2d2d;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Form */
+.ce-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ce-field label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.ce-field input,
+.ce-field textarea,
+.ce-field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.ce-field input:focus,
+.ce-field textarea:focus,
+.ce-field select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 2px rgba(25,118,210,0.2);
+}
+
+.ce-error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Button Row */
+.ce-button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.ce-button-row button {
+  flex: 1;
+}
+
+/* Buttons */
+.ce-btn-primary {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ce-btn-primary:hover {
+  background: #0d63b8;
+}
+
+.ce-btn-secondary {
+  background: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ce-btn-secondary:hover {
+  background: #7a7a7a;
+}

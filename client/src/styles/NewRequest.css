@@ -1,0 +1,198 @@
+/* --- General Page Container --- */
+.ne-page-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Card/Form Container --- */
+.ne-card {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* --- Title/Header --- */
+.ne-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: center;
+}
+
+/* --- Form Field Structure --- */
+.ne-form .ne-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ne-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* --- Input & Textarea --- */
+.ne-form input,
+.ne-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.ne-form input:focus,
+.ne-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.2);
+}
+
+.ne-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ========================================================= */
+/* --- BUTTON ROW (FULL WIDTH, PERFECT ALIGNMENT)         --- */
+/* ========================================================= */
+
+.ne-button-row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+/* --- Reset all styles so both buttons behave identically --- */
+.ne-button-row button {
+  all: unset;               
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+  padding: 0;
+
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+
+  cursor: pointer;
+  white-space: nowrap; 
+}
+
+/* ========================================================= */
+/* --- APPLY ACTUAL BUTTON COLORS (to fix hover-only issue) */
+/* ========================================================= */
+
+.primary-btn {
+  background-color: #2f7df6 !important;
+  color: white !important;
+}
+
+.secondary-btn {
+  background-color: #999 !important;
+  color: white !important;
+}
+
+/* --- Hover Effects --- */
+.primary-btn:hover {
+  background-color: #1f5fcc !important;
+}
+
+.secondary-btn:hover {
+  background-color: #7a7a7a !important;
+}
+
+/* ========================================================= */
+/* --- MOBILE VIEW (STACK BUTTONS)                        --- */
+/* ========================================================= */
+
+@media (max-width: 650px) {
+  .ne-card {
+    padding: 20px;
+  }
+
+  .ne-title {
+    font-size: 1.6rem;
+  }
+
+  .ne-button-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ne-button-row button {
+    width: 100%;
+  }
+}
+
+/* --- Dropdown Select Styling --- */
+.ne-form select,
+.edit-form select {
+  appearance: none;              /* removes default OS dropdown style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+
+  cursor: pointer;
+  transition: border 0.2s, box-shadow 0.2s;
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Focus effect (same as inputs) */
+.ne-form select:focus,
+.edit-form select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Disable look */
+.ne-form select:disabled,
+.edit-form select:disabled {
+  background-color: #f2f2f2;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Optional: Custom dropdown arrow */
+.ne-form select,
+.edit-form select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23777' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+}
+
+/* Make sure arrow does not overlap text */
+.ne-form select,
+.edit-form select {
+  padding-right: 40px;
+}
+
