@@ -38,5 +38,3 @@ This project is a full-stack Event Planner application designed to help clients 
 
 ---
 
-## 📁 Project Structure
-
