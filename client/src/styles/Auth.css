@@ -1,0 +1,95 @@
+/* -------------- GLOBAL PAGE WRAPPER -------------- */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  /* Change direction to column so the title sits above the card */
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background: #f3f6fa;
+  padding: 20px;
+}
+
+/* -------------- APPLICATION MAIN TITLE (NEW) -------------- */
+.app-main-title {
+  font-size: 3em; 
+  font-weight: 800; /* Made slightly bolder */
+  color: #324a5f; /* Used a dark color from the existing theme */
+  text-align: center;
+  margin-bottom: 25px; /* Space between the title and the card */
+}
+
+/* -------------- CARD STYLING -------------- */
+.auth-card {
+  width: 380px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #324a5f;
+}
+
+/* -------------- FORM INPUTS -------------- */
+.auth-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.auth-form input,
+.auth-form select,
+.auth-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.auth-form textarea {
+  min-height: 90px;
+}
+
+/* -------------- BUTTONS -------------- */
+.auth-btn {
+  width: 100%;
+  background: #4c80f1;
+  color: white;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.auth-btn:hover {
+  background: #3a6ad1;
+}
+
+/* -------------- SWITCH LINKS -------------- */
+.auth-switch {
+  text-align: center;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.auth-switch a {
+  color: #4c80f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
